@@ -21,3 +21,5 @@ class ProductMaterialType(models.Model):
 
     code = fields.Char("Type Code", size=12, required=True)
     name = fields.Char("Type Name", required=True)
+
+    _sql_constraints = [('code_unique', 'unique (code)', 'Type code must be unique')]
