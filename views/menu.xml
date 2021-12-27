@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="menu_prod_material_root"
+              name="Product Material"
+              sequence="7"/>
+
+    <menuitem id="menu_prod_material_view"
+              action="action_view_product_material"
+              parent="product_material.menu_prod_material_root"/>
+
+    <menuitem id="menu_prod_material_type_view"
+              action="action_view_product_material_type"
+              parent="product_material.menu_prod_material_root"/>
+
+</odoo>

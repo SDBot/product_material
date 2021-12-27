@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- PRODUCT MATERIAL VIEW START-->
+    <record id="view_product_material_search" model="ir.ui.view">
+        <field name="name">product.material.search</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <search string="Material">
+                <field name="name" string="Name"/>
+                <group expand="0" string="Group By">
+                    <filter string='Group by Material type' name='group_material_type' context="{'group_by': 'type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_product_material_tree">
+        <field name="name">product.material.tree</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <tree string="Material" editable="top">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="type_id"/>
+                <field name="price_buy"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_product_material">
+        <field name="name">Product Material</field>
+        <field name="res_model">product.material</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <!-- PRODUCT MATERIAL VIEW END-->
+
+
+    <!-- PRODUCT MATERIAL TYPE VIEW START-->
+    <record model="ir.ui.view" id="view_product_material_type_tree">
+        <field name="name">product.material.type.tree</field>
+        <field name="model">product.material.type</field>
+        <field name="arch" type="xml">
+            <tree string="Material Type" editable="top">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_product_material_type">
+        <field name="name">Product Material</field>
+        <field name="res_model">product.material.type</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <!-- PRODUCT MATERIAL TYPE VIEW END-->
+
+</odoo>
