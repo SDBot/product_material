@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="material_type_fabric" model="product.material.type">
+        <field name="name">Fabric</field>
+        <field name="code">fabric</field>
+    </record>
+
+    <record id="material_type_jeans" model="product.material.type">
+        <field name="name">Jeans</field>
+        <field name="code">jean</field>
+    </record>
+
+    <record id="material_type_cotton" model="product.material.type">
+        <field name="name">Cotton</field>
+        <field name="code">cotton</field>
+    </record>
+
+</odoo>

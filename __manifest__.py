@@ -10,6 +10,7 @@ This module allow customization of product materials
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'data/product_material_type_data.xml',
         'views/product_material_views.xml',
         'views/menu.xml',
     ],
