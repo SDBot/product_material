@@ -8,6 +8,12 @@
         <field name="arch" type="xml">
             <search string="Material">
                 <field name="name" string="Name"/>
+                <filter string="Type Fabric" name="type_fabric"
+                        domain="[('type_id', '=', 'Fabric')]"/>
+                <filter string="Type Jeans" name="type_jeans"
+                        domain="[('type_id', '=', 'Jeans')]"/>
+                <filter string="Type Cotton" name="type_cotton"
+                        domain="[('type_id', '=', 'Cotton')]"/>
                 <group expand="0" string="Group By">
                     <filter string='Group by Material type' name='group_material_type' context="{'group_by': 'type_id'}"/>
                 </group>
